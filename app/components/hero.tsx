@@ -1,5 +1,9 @@
 import { Spotlight } from "./ui/Spotlight"
 import { cn } from "@/lib/utils";
+import { TextGenerateEffect } from "./ui/text-generate-effect";
+import Link from "next/link";
+import MagicButton from "./ui/magic-button";
+import { FaLocationArrow } from "react-icons/fa";
 
 
 
@@ -14,7 +18,7 @@ const Hero = () => {
       </div>
 
 
-      <div className="h-screen w-full dark:bg-black-100 bg-white dark:bg-grid-white/[0.5] bg-grid-black/[0.2] flex items-center justify-center absolute top-0 left-0 ">
+      <div className="h-screen w-full dark:bg-black-100 bg-white dark:bg-grid-white/[0.05] bg-grid-black/[0.2] flex items-center justify-center absolute top-0 left-0 ">
         <div
           className={cn(
             "absolute inset-0",
@@ -32,6 +36,14 @@ const Hero = () => {
           <h2 className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
             Dynamic web magic with next js
           </h2>
+          <TextGenerateEffect
+          className="text-center text-[40px] md:text-5xl lg:text-6xl"
+          words="Transforming Concepts into Seamless User Experience" />
+
+          <p className="text-center sm:text-xl">
+            Hi, I&apos;m Mubashir Ahmed a Mern Stack Developer based in Pakistan
+          </p>
+          <Link href={"#"}><MagicButton title="Show My Work" icon={<FaLocationArrow />} position="right" /></Link>
         </div>
 
       </div>
